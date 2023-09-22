@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>golden Record</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url(https://cdn.pixabay.com/animation/2022/11/16/14/56/14-56-49-778_512.gif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            perspective: 1000px; /* 3D 뷰의 깊이를 1000px로 설정합니다. */
+        }
+        #myIframe {
+            position: relative;
+            width: 50vw;
+            height: 50vw;
+            border-radius: 50%;
+            text-align: center;
+            animation: rotate 10s linear infinite;
+            overflow: hidden;
+        }
+        #myIframe:hover {
+            animation: none;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+            }
+            100% {
+                transform: rotateX(360deg) rotateY(0deg) rotateZ(360deg);
+            }
+        }
+        a{
+            color: beige;
+        }
+    </style>
+</head>
+<body id="parent">
+    <a href="./record.html">go record</a>
+    <iframe id="myIframe" src="./record.html"></iframe>
+</body>
+</html>
